@@ -38,11 +38,6 @@ namespace SimonSays
             circlePath.AddEllipse(5, 5, 215, 215);
             Region buttonRegion = new Region(circlePath);
 
-            //buttonRegion.Exclude(new Rectangle(0, 105, 110, 5));
-            //buttonRegion.Exclude(new Rectangle(105, 0, 5, 110));
-            //buttonRegion.Exclude(new Rectangle(0, 0, 5, 110));
-            //buttonRegion.Exclude(new Rectangle(0, 0, 110, 5));
-
             greenButton.Region = buttonRegion;
 
             Matrix transformMatrix = new Matrix();
@@ -78,7 +73,7 @@ namespace SimonSays
             Thread.Sleep(250);
             if (speed > 300)
             {
-                speed -= 50;
+                speed -= 75;
             }
             //TODO: get rand num between 0 and 4 (0, 1, 2, 3) and add to pattern list. Each number represents a button. For example, 0 may be green, 1 may be blue, etc.
             Random rnd = new Random();
@@ -145,7 +140,7 @@ namespace SimonSays
                 greenButton.BackColor = Color.LimeGreen;
                 greenSound.Play();
                 this.Refresh();
-                Thread.Sleep(175);
+                Thread.Sleep(150);
                 greenButton.BackColor = Color.ForestGreen;
                 this.Refresh();
                 guess++;
@@ -172,7 +167,7 @@ namespace SimonSays
                 redButton.BackColor = Color.Red;
                 redSound.Play();
                 this.Refresh();
-                Thread.Sleep(175);
+                Thread.Sleep(150);
                 redButton.BackColor = Color.DarkRed;
                 this.Refresh();
                 guess++;
@@ -195,7 +190,7 @@ namespace SimonSays
                 yellowButton.BackColor = Color.Gold;
                 yellowSound.Play();
                 this.Refresh();
-                Thread.Sleep(175);
+                Thread.Sleep(150);
                 yellowButton.BackColor = Color.Goldenrod;
                 this.Refresh();
                 guess++;
@@ -218,7 +213,7 @@ namespace SimonSays
                 blueButton.BackColor = Color.MediumSlateBlue;
                 blueSound.Play();
                 this.Refresh();
-                Thread.Sleep(175);
+                Thread.Sleep(150);
                 blueButton.BackColor = Color.DarkBlue;
                 this.Refresh();
                 guess++;
